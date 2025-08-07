@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "@uidotdev/usehooks";
 import { Toaster } from "react-hot-toast";
 
-import { fetchNotes } from "../../components/lib/api";
+import { fetchNotes } from "../../lib/api";
 
 import NoteList from "../NoteList/NoteList";
 import Loader from "../Loader/Loader";
