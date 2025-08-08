@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import css from "./Modal.module.css";
 
-// const modalRoot = document.getElementById("modal-root") as HTMLElement;
-
 interface Props {
   onClose: () => void;
   children: React.ReactNode;
