@@ -1,5 +1,5 @@
 import { TanStackProvider } from "../../components/TanStackProvider/TanStackProvider";
-import NotesClient from "../../components/Notes/Notes.client";
+import NotesClient from "./Notes.client";
 
 export const metadata = {
   title: "NoteHub | Нотатки",
