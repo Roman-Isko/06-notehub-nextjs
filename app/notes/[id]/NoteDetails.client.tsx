@@ -19,6 +19,7 @@ export default function NoteDetails({ noteId }: NoteDetailsProps) {
   } = useQuery<Note>({
     queryKey: ["note", noteId],
     queryFn: () => getNoteById(noteId),
+    refetchOnMount: false, // ✅ уникаємо зайвого перезапиту
   });
 
   if (isLoading) return <Loader />;

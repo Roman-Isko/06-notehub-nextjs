@@ -42,6 +42,7 @@ export default function NotesClient({ initialNotes }: NotesProps) {
       queryKey: ["notes", page, debouncedSearch],
       queryFn: () => getNotes({ page, search: debouncedSearch }),
       initialData: initialNotes,
+      placeholderData: (prev) => prev, // ✅ запобігає мерехтінню при пагінації
     });
 
   const handleSearch = (query: string) => setSearch(query);
