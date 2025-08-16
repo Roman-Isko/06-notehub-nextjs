@@ -1,37 +1,3 @@
-// "use client";
-
-// import { useQuery } from "@tanstack/react-query";
-// import { getNoteById } from "../../../lib/api";
-// import { Note } from "../../../types/note";
-// import Loader from "../../../components/Loader/Loader";
-// import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
-
-// interface NoteDetailsProps {
-//   noteId: string;
-// }
-
-// export default function NoteDetails({ noteId }: NoteDetailsProps) {
-//   const {
-//     data: note,
-//     isLoading,
-//     isError,
-//   } = useQuery<Note>({
-//     queryKey: ["note", noteId],
-//     queryFn: () => getNoteById(noteId),
-//   });
-
-//   if (isLoading) return <Loader />;
-//   if (isError || !note) return <ErrorMessage message="Note not found" />;
-
-//   return (
-//     <div>
-//       <h1>{note.title}</h1>
-//       <p>{note.content}</p>
-//       <small>{note.tag}</small>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
@@ -77,33 +43,3 @@ export default function NoteDetails({ noteId }: NoteDetailsProps) {
     </div>
   );
 }
-
-// "use client";
-
-// import { Note } from "../../../types/note";
-// import css from "./NoteDetails.module.css";
-
-// interface NoteDetailsProps {
-//   note: Note;
-// }
-
-// export default function NoteDetails({ note }: NoteDetailsProps) {
-//   const { title, content, tag, createdAt, updatedAt } = note;
-
-//   return (
-//     <div className={css.container}>
-//       <h1 className={css.title}>{title}</h1>
-//       <p className={css.tag}>#{tag}</p>
-//       <p className={css.content}>{content}</p>
-
-//       <div className={css.meta}>
-//         <p>
-//           <strong>Created:</strong> {new Date(createdAt).toLocaleString()}
-//         </p>
-//         <p>
-//           <strong>Updated:</strong> {new Date(updatedAt).toLocaleString()}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
