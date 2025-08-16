@@ -45,6 +45,7 @@ export async function updateNote(
   return res.data;
 }
 
-export async function deleteNote(id: string): Promise<void> {
-  await instance.delete(`/notes/${id}`);
+export async function deleteNote(id: string): Promise<Note> {
+  const res = await instance.delete<Note>(`/notes/${id}`);
+  return res.data;
 }
